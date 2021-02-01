@@ -1,16 +1,19 @@
+import 'package:flutter/material.dart';
+
 class AppState {
   final int count;
-  AppState({this.count = 0});
+  final TextEditingController textEditingController;
+  AppState({this.count = 0, this.textEditingController});
 }
 
-abstract class Action {}
+abstract class CounterAction {}
 
-class Up extends Action {
+class Up extends CounterAction {
   final int delta;
   Up(this.delta);
 }
 
-class Down extends Action {
+class Down extends CounterAction {
   final int delta;
   Down(this.delta);
 }
